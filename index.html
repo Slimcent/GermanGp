@@ -1,0 +1,97 @@
+<html>
+  <head>
+     <title>German Grade Point Calculator</title>
+     <link rel="stylesheet" href="css/nav.css">
+     <link rel="stylesheet" href="css/form.css">
+     
+     <!-- Font Awesome CSS -->
+    <link rel="stylesheet" type="text/css" href="fa/css/all.min.css">
+  </head>
+  <body>
+    <div class="words">
+        <p class="wo">
+          Its important to know the German equivalent of your Grade Point before
+          proceeding with your German school Application.
+        </p>
+        <p class="wo">
+          <b>Note</b>
+        </p>
+        <p class="wo">
+          <b>Your Grade Point : </b> This is the grade point you graduated with,
+             the grade point in your transcript.
+        </p>
+        <p class="wo">
+          <b>School GPmax : </b> This is the <em>Highest</em> or <em>Maximun</em> grade
+             in your school grading system.
+        </p>
+        <p class="wo">
+          <b>School GPmin : </b> This is the <em>Lowest</em> or <em>Minimum</em> grade
+             in your school grading system, its usually 1.
+        </p>
+        <p class="wo">
+          <b>1</b> is the <em>Highest</em> or <em>Maximum</em> grade
+             in the German grading system, <b>1</b> is <b>First class</b>.
+        </p>
+    </div>
+    <div class="container">
+        <div class="heading">
+            <h3>German Grade Point Calculator</h3>
+        </div>
+        <br/>
+        <form>
+            <div class="icon">
+                <span class="fa fa-user"></span>
+            </div>
+            <div class="inputBox">
+                <input class="a gp" type="text">
+                <label id = "gpa">Your Grade Point</label>
+                <span id="" class ="egp inputError"></span>
+            </div>
+            
+            <div class="icon">
+                <span class="fa fa-user"></span>
+            </div>
+            <div class="inputBox">
+                <input class="b gpmax" type="text">
+                <label id="sgpmax" >School GPmax</label>
+                <span id="" class ="egpmax inputError"></span>
+            </div>
+
+            <div class="icon">
+                <span class="fa fa-lock"></span>               
+            </div>
+            <div class="inputBox">
+                <input class="b gpmin" type="text">
+                <label id="sgpmin" >School GPmin</label>
+                <span class ="egpmin inputError" id="gpmin"></span>
+            </div>
+            <div class="display">
+                <label class="result"></label>
+            </div>
+    
+            <div>
+                <input type="button" id="ccc" value="Calculate" class="sub">
+            </div
+            <br>
+            <br>
+            <div class="clear-btn">
+               <button class="clr"> Clear </button>
+            </div>
+        </form>
+    </div>
+    <script src="js/gp.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+         jQuery('.gp').keyup(function () { 
+            if(($(this).val().split(".")[0]).indexOf("00")>-1){
+                $(this).val($(this).val().replace("00","0"));
+             } else {
+                $(this).val($(this).val().replace(/[^0-9\.]/g,''));
+             }
+             if($(this).val().split(".")[2] != null || ($(this).val().split(".")[2]).length ){
+                $(this).val($(this).val().substring(0, $(this).val().lastIndexOf(".")));
+             }    
+         });
+    </script>
+  </body
+</html>
