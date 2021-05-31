@@ -1,0 +1,158 @@
+.container{
+    margin: 40px auto;
+    width: 400px;
+    background-color: red;
+    background: rgba(0,0,0,8);
+    position: relative;
+    box-shadow: 0 10px 15px rgba(0,0,0,.5);
+	border-radius: 10px;
+}
+
+.heading{
+	text-align: center;
+	box-shadow: 1px 1px 1px #555;
+	padding: 20px;
+	background: orange;
+}
+
+.container .inputBox{
+	position: relative;
+}
+
+form{
+	padding: 20px;
+}
+
+.icon{
+    display: none;
+	position: absolute;
+	font-size: 21px;
+	padding: 3px 8px 8px 2px;
+	color: orange;
+}
+
+.container .inputBox input{
+    width: 100%;
+	padding: 4px 25px;
+	font-size: 16px;
+	color: #fff;
+	letter-spacing: 1px;
+	margin-bottom: 35px;
+    border: none;
+	border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.container .inputBox input:focus{
+	outline: none;
+	color: #fff;
+	font-weight: bolder;
+	border-bottom: 2px solid orange;
+}
+
+.container .inputBox label{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 7px 0;
+	font-size: 14px;
+	color: #fff;
+	pointer-events: none;
+	transition: .5s;
+	margin-left: 24px;
+}
+
+.container .inputBox input:focus ~ label,
+.container .inputBox input:valid ~ label{
+	top: -21px;
+	left: 0;
+	color: #fff;
+	font-size: 12px;
+}
+
+.inputError{
+    position: absolute;
+	top: 0;
+	left: 40%;
+	color: red;
+    margin-top: -16px;
+}
+
+.sub{
+	width: 100%;
+	padding: 10px;
+	border:none;
+	border-radius: 10px;
+	font-weight: bolder;
+	font-size: 16px;
+	color: #fff;
+	background: red;
+	cursor: pointer;
+	font-family: 'Rubik', sans-serif;
+}
+
+.sub:focus{
+	outline: none;
+}
+.sub:hover{
+	background: #FF8C00;
+}
+
+.down{
+    text-align: center;
+    padding: 10px;
+    font-weight: bolder;
+    color: #7B7D7D;
+    margin-top: -15px;
+}
+
+.down a{
+	text-decoration: none;
+	color: #C70039;
+}
+
+.clear-btn{
+    text-align: center;
+}
+
+.display{
+    color: #fff;
+    text-align: center;
+    font-size: large;
+    margin-top: -27px;
+    margin-bottom: 13px;
+}
+
+.clear-btn .clr{
+    width: 80%;
+	padding: 10px;
+	border:none;
+	border-radius: 10px;
+	font-weight: bolder;
+	font-size: 16px;
+	color: #fff;
+	background: blue;
+	cursor: pointer;
+	font-family: 'Rubik', sans-serif;
+}
+
+.clear-btn .clr:hover{
+    background-color: #800000;
+}
+
+.words{
+    text-align: center;
+}
+
+.wo{
+    margin-bottom: -15px;
+}
+
+@media screen and (max-width: 600px){
+    .container{
+        width: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
